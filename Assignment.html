@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignment.css">
+    <title>Ai assignemnt assistant</title>
+    <audio id="myaudio" src="audio files/hello sound.mp3" preload="auto"></audio>
+</head>
+<body>
+        <nav class="nav-elem-container">
+            <ul id="nav-list-container">
+                <li id="nav-elem" class="nav-obj" onclick="scr_move2()">Home</li>
+                <li id="nav-elem" class="nav-obj" onclick="scr_move3()">Engine</li>
+                <li id="nav-elem" class="nav-obj" onclick="scr_move4()">Settings</li>
+                <li id="nav-elem" class="nav-obj" onclick="scr_move5()">About tool</li>
+                <li id="nav-elem" class="nav-obj" onclick="scr_move6()">Contact me</li>
+            </ul>
+        </nav>
+    
+     <div  id="home-page">
+        <div id="home-part-1">
+                <p id="home-heading">Our goal is to make students life easy !</p>
+                <p id="home-content">Ai Assignment assistant is made for the students who make notes from digital documents</p>
+            <div id="home-part-1-btn-container">
+                <button type="submit" id="home-part-1-btn" onclick="scr_move()">Dive in</a></button>
+            </div>
+        </div>
+        
+        <div id="home-part-2">
+            <img src="images and icons/Nerd.jpg" id="head-img" alt="">
+        </div>
+    </div>
+
+    <div class="drop-section" id="drop-section">
+        <div class="drag-drop-box">
+          <p>Drop files here or click to upload</p>
+          <input type="file" id="file-input" multiple accept=".pdf,.docx,.doc,.xlsx,.xls,.pptx,.ppt,.jpg,.jpeg,.png">
+        </div> 
+    </div>        
+
+    <div class="file-content-section">
+        <div id="sector-1">
+            <p id="sect-1-head">Page list</p>
+        </div>
+        
+        <div id="sector-2">
+            <p id="sect-2-head">Page preview</p>
+        </div>
+    </div>
+    <div id="drop-btn-container">
+        <div id="drop-btn">
+            <img id="btns" src="images and icons/backward.png" alt="back-btn">
+            <img id="btns" class="play-pause-btn" src="images and icons/play.png" onclick="toggle_PlayPause()" alt="play-btn">
+            <img id="btns" class="play-pause-btn" src="images and icons/play.png" onclick="toggle_PlayPause()" alt="pause-btn">
+            <img id="btns" src="images and icons/forward.png" alt="forward-btn">
+        </div>      
+    </div>
+
+    <div class="settings-parent" id="settings-page"> 
+        <div class="settings-section" id="settings-sect">
+            <p id="settings-p">Settings</p>
+            <form action="" method="post">
+                <div>
+                    <input type="number" placeholder="Count">
+                </div>
+
+                <div>
+                    <input type="number" placeholder="Break">
+                </div>
+            
+                <div>
+                    <input type="number" placeholder="Backward">
+                </div>
+
+                <div>
+                    <input type="number" placeholder="Forward">
+                </div>
+
+                <div>
+                    <input id="speed_range" type="range" min="1" max="8" value="1" step="1">
+                    <div id="value-set">
+                        <div id="range-value">0.25</div>
+                        <div id="range-value">0.5</div>
+                        <div id="range-value">0.75</div>
+                        <div id="range-value">1</div>
+                        <div id="range-value">1.25</div>
+                        <div id="range-value">1.5</div>
+                        <div id="range-value">1.75</div>
+                        <div id="range-value">2</div>
+                    </div>
+                        
+                </div>
+                <div class="settings-btn">
+                    <div id="btn1">OK</div>
+                    <div id="btn2">Clear</div>
+                </div>
+            </form>
+        </div>
+     </div>
+    <div class="section2" id="about-page">
+        <div id="section2-child1">
+            <img src="images and icons/AI2.jpg" alt="" id="ai-img">
+        </div> 
+
+        <br>
+    
+        <div id="section2-child2">
+            <h3 id="tool-heading">Ai Assignment assistant</h3>
+            <br><br><br>
+
+            <p id="tool-p" style="color: rgb(235, 235, 235);">Voice support & Automation | Used in Assignments | Useful for students | Easy life </p>
+        </div>   
+    </div>
+        <div class="footer-page">
+            <div id="footer-content">
+                <p id="footer-p">Contact me</p>
+                <a href="https://github.com/cs223441/"><img id="footer-icon" src="images and icons/github.png" alt="github profile"style="width:2vw;"></a>
+                <a href="https://www.linkedin.com/in/chaitanya-sharma-242a362b5/"><img id="footer-icon" src="images and icons/linkedin.png" alt="linkedin profile" style="width:2vw;"></a>
+                <a href="https://www.instagram.com/cs123sharma/"><img id="footer-icon"src="images and icons/instagram.png" alt="instagram profile"style="width:2vw;"></a>
+            </div>
+        </div>
+    <script>
+
+        document.getElementById("home-part-1-btn").addEventListener("click",scr_move());
+        function scr_move(){   
+        document.getElementById("#home-page").scrollIntoView({behavior:"smooth"}); 
+        }
+
+        document.getElementByClass("nav-obj").addEventListener("click",scr_move2());
+        function scr_move2(){   
+        document.getElementById("home-page").scrollIntoView({behavior:"smooth"}); 
+        }
+
+        document.getElementByClass("nav-obj").addEventListener("click",scr_move3());
+        function scr_move3(){   
+        document.getElementById("drop-section").scrollIntoView({behavior:"smooth"}); 
+        }
+
+        document.getElementByClass("nav-obj").addEventListener("click",scr_move4());
+        function scr_move4(){   
+        document.getElementById("settings-page").scrollIntoView({behavior:"smooth"}); 
+        }
+
+        document.getElementByClass("nav-obj").addEventListener("click",scr_move5());
+        function scr_move5(){   
+        document.getElementById("about-page").scrollIntoView({behavior:"smooth"}); 
+        }
+
+        document.getElementByClass("nav-obj").addEventListener("click",scr_move6());
+        function scr_move6(){   
+        document.getElementById("footer-content").scrollIntoView({behavior:"smooth"}); 
+        }
+
+        document.getElementByClass('drop-area').addEventListener('change',function(event){
+            var file_name=event.target.files[0].name;
+            alert('select file'+file_name);
+        });
+
+        const range = document.getelementById("speed-range");
+        const rangevalue=document.getElementById("range-value");
+
+        range.addEventListener("input",function(){
+            rangevalue.textContent = range.value;
+        });
+        
+        const dropzone=document.getElementByClass('drag-drop-box');
+
+        dropzone.addEventListener('dragover',(event)=>{
+            event.preventDefault();
+            dropzone.classList.add('active')
+        });
+        
+        dropzone.addEventListener('dragleave',(event)=>{
+            dropzone.classList.remove('avtive')
+        });
+
+        dropzone.addEventListener('drop',(event)=>{
+            event.preventDefault();
+            dropzone.classList.remove('active');
+        });
+
+        function toggle_PlayPause(){
+            const playpauseBTN=document.getElementsByClassName('play-pause-btn');
+
+            if(playpauseBTN.classList.contains('play')){
+                playpauseBTN.classList.remove('play');
+                playpauseBTN.classList.add('pause');
+                playpauseBTN.textContent='pause';
+
+            }
+            else{
+
+            }
+        }
+        
+        </script>
+</body>
+</html>
